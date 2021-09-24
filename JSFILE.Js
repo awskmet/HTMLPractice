@@ -1,4 +1,4 @@
-//alert('You successfully linked your JavaScript file!');
+alert('You successfully linked your JavaScript file!');
 var $testInfo = $('#testInfo');
 var myName='Anthony';
 var $userAge=$('#userage');
