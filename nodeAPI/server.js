@@ -4,6 +4,18 @@ var app = express();
 var fs = require('fs'); //require file system object, database/json file is in file system
 
 // Endpoint to Get a list of users
+app.get('/', function(req, res){
+fs.readFile('../htmltestsite/htmltest.html', function(error, data){
+   if (error){
+      res.writeHead(404)
+      console.log("error finding file")
+   }else{
+   res.write(data)
+   }
+   res.end()
+})
+
+})
 app.get('/apijson', function(req, res){
     fs.readFile(__dirname + "/" + "apijson.json", 'utf8', function(err, data){
         if (err){
